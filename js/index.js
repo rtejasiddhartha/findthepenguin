@@ -28,9 +28,12 @@ $(document).ready(function () {
     const index = parseInt(mound.attr("data-index"), 10);
 
     mound.css("pointer-events", "none");
+    mound.addClass("revealed");
+
     clickCount++;
 
     if (role === "yeti") {
+      mound.addClass("revealed");
       mound.css("background-image", "url(images/yeti.png)");
       playSound("media/Yetipop.wav");
       endGame(false);
@@ -70,17 +73,25 @@ $(document).ready(function () {
     score = 0;
     clickCount = 0;
 
+    //$(".FindThePenguin").each(function (i) {
+    //  $(this)
+    //    .removeClass("yetti")
+    //    .attr("data-role", "penguin")
+    //    .attr("data-index", i + 1)
+    //    .css({
+    //      "pointer-events": "auto",
+    //      "visibility": "visible",
+    //      "background-image": `url(images/mound_${i + 1}.png)`
+    //    });
+    //});
+    
     $(".FindThePenguin").each(function (i) {
-      $(this)
-        .removeClass("yetti")
-        .attr("data-role", "penguin")
-        .attr("data-index", i + 1)
-        .css({
-          "pointer-events": "auto",
-          "visibility": "visible",
-          "background-image": `url(images/mound_${i + 1}.png)`
-        });
-    });
+  $(this)
+    .removeClass("revealed")
+    .attr("data-role", "penguin")
+    .attr("data-index", i + 1)
+    .css("background-image", `url(images/mound_${i + 1}.png)`);
+});
 
     $("#gameholder").show();
     $("#message").hide();
