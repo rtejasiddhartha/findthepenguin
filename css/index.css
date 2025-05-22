@@ -5,7 +5,7 @@
   --shadow: rgba(0, 0, 0, 0.2);
   --border-radius: 12px;
 }
-  
+
 body {
   background: linear-gradient(to bottom right, #ccf5f5, #e0f7fa);
   margin: 0;
@@ -13,11 +13,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem 1rem 1rem; /* shift entire content down */
+  padding: 2rem 1rem 1rem 1rem;
   min-height: 100vh;
 }
 
-/* Top section layout wrapper */
 #top-panel {
   width: 100%;
   max-width: 720px;
@@ -28,7 +27,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Game title */
 #title {
   background-image: url('../images/penguin_title.png');
   width: 100%;
@@ -38,7 +36,6 @@ body {
   background-position: center;
 }
 
-/* Score and instruction cards */
 #score,
 #instruction {
   background-color: var(--card-bg);
@@ -54,15 +51,14 @@ body {
   margin: 0 auto;
 }
 
-/* 3x3 Penguin Grid */
 #gameholder {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
-  grid-template-rows: repeat(3, 1fr);    /* Always 3 rows */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 0.5rem;
   width: 100%;
   max-width: 640px;
-  aspect-ratio: 1 / 1; /* Keeps square grid */
+  aspect-ratio: 1 / 1;
   padding: 0 1rem;
   margin-bottom: 2rem;
 }
@@ -83,7 +79,17 @@ body {
   box-shadow: 0 4px 12px var(--shadow);
 }
 
-/* Win/Lose message */
+/* Individual hover images with !important */
+#penguin1:hover { background-image: url('../images/mound_1_hover.png') !important; }
+#penguin2:hover { background-image: url('../images/mound_2_hover.png') !important; }
+#penguin3:hover { background-image: url('../images/mound_3_hover.png') !important; }
+#penguin4:hover { background-image: url('../images/mound_4_hover.png') !important; }
+#penguin5:hover { background-image: url('../images/mound_5_hover.png') !important; }
+#penguin6:hover { background-image: url('../images/mound_6_hover.png') !important; }
+#penguin7:hover { background-image: url('../images/mound_7_hover.png') !important; }
+#penguin8:hover { background-image: url('../images/mound_8_hover.png') !important; }
+#penguin9:hover { background-image: url('../images/mound_9_hover.png') !important; }
+
 #message {
   padding: 1.5rem;
   background-color: var(--card-bg);
@@ -93,7 +99,7 @@ body {
   border-radius: var(--border-radius);
   box-shadow: 0 4px 12px var(--shadow);
   position: fixed;
-  top: 65%;                /* pushed lower from center */
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   visibility: hidden;
@@ -104,16 +110,14 @@ body {
   z-index: 9999;
 }
 
-
-
-/* Responsive adjustments */
 @media (max-width: 600px) {
   #top-panel {
     gap: 0.75rem;
     margin-bottom: 1rem;
   }
 
-  #score, #instruction {
+  #score,
+  #instruction {
     width: 90%;
     font-size: 0.95rem;
   }
@@ -122,6 +126,7 @@ body {
     padding: 0 0.5rem;
     max-width: 360px;
   }
+
   #message {
     top: 75%;
     transform: translate(-50%, -50%);
