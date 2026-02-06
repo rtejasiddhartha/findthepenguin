@@ -19,6 +19,15 @@ Each round is different, making the game unpredictable and replayable.
 
 ---
 
+## 🔗 Live Project
+
+🎮 **Play Here:**  
+👉 https://findthepenguin.netlify.app/
+
+Experience the game directly in your browser — fully responsive across desktop, tablet, and mobile devices.
+
+---
+
 ## ✨ Core Features
 
 - 🎯 **Click-to-Reveal Game Mechanics**  
